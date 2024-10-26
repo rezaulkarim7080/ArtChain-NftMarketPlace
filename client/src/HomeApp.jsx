@@ -100,10 +100,7 @@ const HomeApp = () => {
         console.error("Error fetching NFT items:", error);
       }
     };
-    if (isConnected) {
-      fetchData();
-    }
-  }, [isConnected, signer]);
+  }, [signer]);
 
   // Update nfts and nftCopy states when items are fetched
   useEffect(() => {
