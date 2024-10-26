@@ -5,11 +5,16 @@ Welcome to the ArtChain NFT Marketplace! This platform enables users to explore,
 ![ArtChain Logo](/artchain.png)
 
 
+![ArtChain Logo](/ArtChainFullPage.png)
+
 ## Live Demo
 
 Check out the live site here: [ArtChain NFT Marketplace](https://art-chain-nft-market-place.vercel.app/)
 
-![ArtChain Logo](/ArtChainFullPage.png)
+## Demo Youtube Video
+
+Watch a detailed walkthrough on YouTube: [ArtChain NFT Marketplace Overview]( https://youtu.be/2PY26ZldooM)
+
 
 ## Features
 
