@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const jwt = process.env.VITE_API_JWT;
+const jwt = import.meta.env.VITE_API_JWT;
 
 // Upload JSON metadata to Pinata
 export const uploadJSONToIPFS = async (JSONBody) => {

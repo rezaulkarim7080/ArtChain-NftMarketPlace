@@ -187,7 +187,7 @@ const UploadNftPage = () => {
           <div className="relative">
             <input
               type="file"
-              name="number"
+              name="image"
               className="block w-full text-sm  file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file: file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
               id="customFile"
               onChange={onFileChange}
