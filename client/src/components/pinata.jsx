@@ -3,8 +3,8 @@
 import axios from "axios";
 
 // Use the JWT token from Vite's environment
-const jwt = import.meta.env.VITE_API_JWT;
-// const jwt = process.env.VITE_API_JWT;
+// const jwt = import.meta.env.VITE_API_JWT;
+const jwt = process.env.VITE_API_JWT;
 
 // Upload JSON metadata to Pinata
 export const uploadJSONToIPFS = async (JSONBody) => {
