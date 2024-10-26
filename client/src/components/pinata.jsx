@@ -1,9 +1,5 @@
-"use server";
-
 import axios from "axios";
 
-// Use the JWT token from Vite's environment
-// const jwt = import.meta.env.VITE_API_JWT;
 const jwt = process.env.VITE_API_JWT;
 
 // Upload JSON metadata to Pinata
@@ -15,17 +11,15 @@ export const uploadJSONToIPFS = async (JSONBody) => {
         Authorization: `Bearer ${jwt}`,
       },
     });
-    console.error(
-      "Error uploading to Pinata:",
-      error.response?.data || error.message
-    );
-
     return {
       success: true,
       pinataURL: "https://gateway.pinata.cloud/ipfs/" + res.data.IpfsHash,
     };
   } catch (error) {
-    console.log(error);
+    console.error(
+      "Error uploading to Pinata:",
+      error.response?.data || error.message
+    );
     return {
       success: false,
       message: error.message,
@@ -44,10 +38,6 @@ export const uploadFileToIPFS = async (data) => {
     cidVersion: 0,
   });
   data.append("pinataOptions", pinataOptions);
-  console.error(
-    "Error uploading to Pinata:",
-    error.response?.data || error.message
-  );
 
   try {
     const res = await axios.post(
@@ -61,13 +51,15 @@ export const uploadFileToIPFS = async (data) => {
         },
       }
     );
-
     return {
       success: true,
       pinataURL: "https://gateway.pinata.cloud/ipfs/" + res.data.IpfsHash,
     };
   } catch (error) {
-    console.log("AxiosError:", error);
+    console.error(
+      "Error uploading to Pinata:",
+      error.response?.data || error.message
+    );
     return {
       success: false,
       message: error.message,
